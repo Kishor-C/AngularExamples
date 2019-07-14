@@ -1,0 +1,20 @@
+<div>
+    <h3>User Registration Form</h3>
+    <form (ngSubmit) = "handleSubmit(user.value)" #user = "ngForm">
+        Name: <input type = "text" name = "name" [(ngModel)] = "name" 
+           placeholder="Enter name">
+           <br>
+        Password: <input type = "password" name = "password" [(ngModel)] = "password" 
+                        placeholder="Enter password">
+            <br>
+        Phone: <input type = "number" name = "phone" [(ngModel)] = "phone" 
+                        placeholder="Enter phone number">
+            <br>
+        DOB: 
+        <input type = "date" name = "dob" [(ngModel)] = "dob">
+        <br>
+        <input type = "submit" value = "Register">
+    </form>
+   <h5 *ngIf = "generatedId">User Added Successfully and its id is {{generatedId}}</h5>
+    <a routerLink = "/login">Login</a>
+</div>

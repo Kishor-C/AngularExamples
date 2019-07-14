@@ -1,0 +1,24 @@
+<div>
+ <h3>Login Form</h3>
+ <form (ngSubmit) = "handleSubmit(login.value)" #login = "ngForm">
+    <div class = "row">
+     <div class = "col-2">
+       <input type = "text" name = "userid" [(ngModel)] = "userId" placeholder="Enter UserId" class = "form-control">
+     </div>
+     <div class = "col-2">
+       <input type = "password" name = "password" [(ngModel)] = "password" placeholder="Enter password" 
+        class = "form-control">
+      </div>
+     <div class = "col-3">
+       <input type = "submit" value = "Login" class = "btn btn-primary">
+     </div>
+    </div>     
+        </form>
+    <h4 *ngIf = "message">{{message}}</h4>
+</div>
+<hr>
+<div class = "row">
+    <div class = "col-3">
+     <a routerLink = "/register">Register</a>
+    </div>
+</div>

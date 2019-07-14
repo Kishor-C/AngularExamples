@@ -1,0 +1,26 @@
+<div>
+    <h2>This is a Demo for Directives</h2>
+    <h5>Value of a: {{a}}</h5>
+    <h5>Value of b: {{b}}</h5>
+    <h5>Value of c: {{c}}</h5>
+    <h5>Value of z: {{z}}</h5>
+    <h4 *ngIf = "a > b">A is greater than B</h4>
+    <h4 *ngIf = "z">We are using z</h4>
+    <h3>There are {{names.length}} items</h3>
+    <ol>
+        <li *ngFor = "let n of names">{{n}}</li>
+    </ol>
+    <h5>Total number of employees: {{employeeList.length}}</h5>
+    <ol>
+        <li *ngFor = "let e of employeeList">Hello {{e.name}}, your salary is {{e.salary}}</li>
+    </ol>
+    <h5>Employee information in Table</h5>
+    <table class = "table">
+        <tr><th>#</th><th>Employee Id</th><th>Employee Name</th><th>Employee Salary</th></tr>
+        <tr *ngFor = "let e of employeeList; let i=index">
+            <td>{{i + 1}}</td><td>{{e.id}}</td> <td>{{e.name}}</td> <td>{{e.salary}}</td>
+        </tr>
+    </table>
+
+
+</div>

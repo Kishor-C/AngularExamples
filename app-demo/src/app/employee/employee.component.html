@@ -1,0 +1,23 @@
+<div>
+    <h3>{{message | lowercase}}</h3>
+    <table border="1" class = "table">
+        <tr>
+            <th>Employee Id</th><th>Employee Name</th>
+            <th>Employee Salary</th><th>Salary in &#8377;</th>
+            <th>Salary in $</th>
+            <th>Salary in &euro;</th>
+        </tr>
+        <tr>
+            <td>{{employee.id}}</td>
+            <td>{{employee.name | uppercase}}</td>
+            <td>{{employee.salary}}</td>
+            <td>{{employee.salary | currency : 'INR'}}</td>
+            <td>{{(employee.salary/72) | currency : 'USD'}}</td>
+            <td>{{(employee.salary/100) | currency : 'EUR'}}</td>
+        </tr>
+        
+        
+    </table>
+    <h3>Date is {{basicDate | date : 'yyyy-MMMM-dd'}}</h3>
+    <button class = "btn btn-danger">Simple Button</button>
+</div>
